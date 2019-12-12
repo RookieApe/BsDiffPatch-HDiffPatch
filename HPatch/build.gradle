@@ -3,8 +3,6 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.1"
-
 
     defaultConfig {
         applicationId "com.cantbot.hpatch"
@@ -15,14 +13,8 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        /*externalNativeBuild {
-            cmake {
-                cppFlags "-frtti -fexceptions"
-//                arguments  "-DANDROID_ALLOW_UNDEFINED_SYMBOLS=TRUE"
-            }
-        }*/
         ndk {
-            abiFilters "armeabi-v7a"
+            abiFilters "armeabi-v7a", "x86"
         }
 
     }
@@ -34,11 +26,11 @@ android {
         }
     }
 
-    /*externalNativeBuild {
+    externalNativeBuild {
         cmake {
             path "CMakeLists.txt"
         }
-    }*/
+    }
 
     lintOptions {
         abortOnError false
