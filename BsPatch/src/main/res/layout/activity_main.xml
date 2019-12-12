@@ -13,9 +13,11 @@
         android:onClick="loadPatch"
         android:text="Load Patch"
         android:textAllCaps="false"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="240dp" />
+        tools:layout_editor_absoluteY="207dp" />
 
     <Button
         android:id="@+id/button2"

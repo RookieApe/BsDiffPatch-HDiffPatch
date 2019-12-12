@@ -1,2 +1,1 @@
 include ':BsPatch', ':HPatch'
-rootProject.name='NDK'
